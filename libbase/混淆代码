@@ -1,0 +1,3 @@
+#lht libbase---
+#-keep public class * extends com.lht.libbase.activity.BaseActivity
+#---lht libbase
