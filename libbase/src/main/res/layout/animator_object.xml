@@ -24,11 +24,13 @@
 
         <TextView
             android:id="@+id/textShow"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:textColor="@color/colorAccent"
             android:textSize="20sp"
+            android:background="#22ff6688"
             android:text="繁"
+            android:gravity="center"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

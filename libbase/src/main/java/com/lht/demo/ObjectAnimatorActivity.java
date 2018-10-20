@@ -1,10 +1,12 @@
 package com.lht.demo;
 
 import android.animation.Animator;
+import android.animation.AnimatorInflater;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
+import android.annotation.SuppressLint;
 import android.view.View;
 import android.widget.TextView;
 
@@ -15,14 +17,14 @@ import com.lht.libbase.activity.BaseActivity;
  * @date 2018/10/19 0019
  */
 
-public class MainActivity extends BaseActivity {
+public class ObjectAnimatorActivity extends BaseActivity {
 
     private TextView textShow,text;
 
     @Override
     protected void initView() {
         super.initView();
-        setContentView(R.layout.main_activity);
+        setContentView(R.layout.animator_object);
         textShow = findViewById(R.id.textShow);
         text = findViewById(R.id.text);
     }
@@ -89,24 +91,6 @@ public class MainActivity extends BaseActivity {
         ObjectAnimator animator2 = ObjectAnimator.ofFloat(textShow, "rotationX", 0,360f);
         ObjectAnimator animator3 = ObjectAnimator.ofFloat(textShow, "rotationY", 0,360f);
 
-        ObjectAnimator animator4 = ObjectAnimator.ofFloat(textShow,"translationX",0,200);
-        ObjectAnimator animator5 = ObjectAnimator.ofFloat(textShow,"scaleX",1,2);
-        ObjectAnimator animator6 = ObjectAnimator.ofFloat(textShow,"scaleY",1,2);
-
-        final ObjectAnimator animator7 = ObjectAnimator.ofFloat(textShow,"translationX",0,50,10,40,20,30,36,33);
-
-
-        final AnimatorSet animatorSet2 = new AnimatorSet();
-        animatorSet2.playTogether(animator4,animator5,animator6);
-        animatorSet2.setDuration(5000);
-        animatorSet2.addListener(new AnimatorListenerAdapter() {
-            @Override
-            public void onAnimationEnd(Animator animation) {
-                super.onAnimationEnd(animation);
-                animator7.start();
-            }
-        });
-
         AnimatorSet animatorSet = new AnimatorSet();
         animatorSet.play(animator1).with(animator2).with(animator3).after(animator0);
         animatorSet.setDuration(2000);
@@ -114,10 +98,34 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onAnimationEnd(Animator animation) {
                 super.onAnimationEnd(animation);
-//                textShow.setX(0);//TODO lht
+
+                ObjectAnimator animator4 = ObjectAnimator.ofFloat(textShow,"translationX",200);
+                ObjectAnimator animator5 = ObjectAnimator.ofFloat(textShow,"scaleX",2);
+                ObjectAnimator animator6 = ObjectAnimator.ofFloat(textShow,"scaleY",2);
+
+                AnimatorSet animatorSet2 = new AnimatorSet();
+                animatorSet2.playTogether(animator4,animator5,animator6);
+                animatorSet2.setDuration(5000);
+                animatorSet2.addListener(new AnimatorListenerAdapter() {
+                    @Override
+                    public void onAnimationEnd(Animator animation) {
+                        super.onAnimationEnd(animation);
+                        ObjectAnimator animator7 = ObjectAnimator.ofFloat(textShow,"translationX",100,190,110,180,120,170,130,160,140,150);
+                        animator7.setDuration(1000);
+                        animator7.start();
+                    }
+                });
+                textShow.setPivotX(0.5f);
+                textShow.setPivotY(0.5f);
                 animatorSet2.start();
             }
         });
         animatorSet.start();
+    }
+
+    public void clickC(View view) {
+        ObjectAnimator animator1 = ObjectAnimator.ofInt(new WrapperView(textShow),"width",200);
+        animator1.setDuration(5000);
+        animator1.start();
     }
 }

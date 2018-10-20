@@ -10,13 +10,19 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name="com.lht.demo.MainActivity">
+        <activity android:name="com.lht.StartActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name="com.lht.demo.ObjectAnimatorActivity"></activity>
+
+        <activity android:name="com.lht.demo.ViewAnimatorActivity"></activity>
+
+        <activity android:name="com.lht.demo.XmlAnimatorActivity"></activity>
 
     </application>
 
