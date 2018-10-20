@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
+import com.lht.demo.LayoutTransitionActivity;
 import com.lht.demo.ObjectAnimatorActivity;
 import com.lht.demo.ViewAnimatorActivity;
 import com.lht.demo.XmlAnimatorActivity;
@@ -17,6 +18,6 @@ public class StartActivity extends Activity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        startActivity(new Intent(this, XmlAnimatorActivity.class));
+        startActivity(new Intent(this, LayoutTransitionActivity.class));
     }
 }

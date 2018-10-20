@@ -5,6 +5,7 @@ import android.animation.AnimatorInflater;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
+import android.animation.PropertyValuesHolder;
 import android.animation.ValueAnimator;
 import android.annotation.SuppressLint;
 import android.view.View;
@@ -125,6 +126,15 @@ public class ObjectAnimatorActivity extends BaseActivity {
 
     public void clickC(View view) {
         ObjectAnimator animator1 = ObjectAnimator.ofInt(new WrapperView(textShow),"width",200);
+        animator1.setDuration(5000);
+        animator1.start();
+    }
+
+    public void clickD(View view) {
+        PropertyValuesHolder propertyValuesHolder = PropertyValuesHolder.ofFloat("scaleX",1.0f,2.0f);
+        PropertyValuesHolder propertyValuesHolder2 = PropertyValuesHolder.ofFloat("scaleY",1.0f,2.0f);
+
+        ObjectAnimator animator1 = ObjectAnimator.ofPropertyValuesHolder(textShow,propertyValuesHolder,propertyValuesHolder2);
         animator1.setDuration(5000);
         animator1.start();
     }

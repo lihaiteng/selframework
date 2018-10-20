@@ -24,6 +24,9 @@
 
         <activity android:name="com.lht.demo.XmlAnimatorActivity"></activity>
 
+        <activity android:name="com.lht.demo.LayoutTransitionActivity"></activity>
+
+
     </application>
 
 </manifest>

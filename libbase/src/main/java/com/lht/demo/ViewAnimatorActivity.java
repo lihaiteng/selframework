@@ -4,6 +4,7 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
+import android.animation.PropertyValuesHolder;
 import android.animation.ValueAnimator;
 import android.view.View;
 import android.widget.TextView;
@@ -27,6 +28,10 @@ public class ViewAnimatorActivity extends BaseActivity {
         text = findViewById(R.id.text);
     }
 
+    /**
+     * AnimatorUpdateListener
+     * @param v
+     */
     public void clickA(View v){
         ValueAnimator valueAnimator = ValueAnimator.ofInt(5,0);
         valueAnimator.setDuration(5000);
@@ -39,5 +44,8 @@ public class ViewAnimatorActivity extends BaseActivity {
             }
         });
         valueAnimator.start();
+    }
+
+    public void clickB(View view) {
     }
 }
