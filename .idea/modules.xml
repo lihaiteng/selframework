@@ -3,12 +3,17 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://E:\LHT\githubspace\selframework\app\app.iml" filepath="E:\LHT\githubspace\selframework\app\app.iml" />
       <module fileurl="file://E:\LHT\framework\libbase\baselib.iml" filepath="E:\LHT\framework\libbase\baselib.iml" />
       <module fileurl="file://E:\LHT\framework\mdfourcomponent\fourcomponent.iml" filepath="E:\LHT\framework\mdfourcomponent\fourcomponent.iml" />
-      <module fileurl="file://$PROJECT_DIR$/framework.iml" filepath="$PROJECT_DIR$/framework.iml" />
+      <module fileurl="file://E:\LHT\githubspace\selframework\framework.iml" filepath="E:\LHT\githubspace\selframework\framework.iml" />
       <module fileurl="file://$PROJECT_DIR$/libbase/libbase.iml" filepath="$PROJECT_DIR$/libbase/libbase.iml" />
+      <module fileurl="file://E:\LHT\githubspace\selframework\libbase\libbase.iml" filepath="E:\LHT\githubspace\selframework\libbase\libbase.iml" />
       <module fileurl="file://$PROJECT_DIR$/mdfourcomponent/mdfourcomponent.iml" filepath="$PROJECT_DIR$/mdfourcomponent/mdfourcomponent.iml" />
+      <module fileurl="file://E:\LHT\githubspace\selframework\mdfourcomponent\mdfourcomponent.iml" filepath="E:\LHT\githubspace\selframework\mdfourcomponent\mdfourcomponent.iml" />
       <module fileurl="file://$PROJECT_DIR$/mdui/mdui.iml" filepath="$PROJECT_DIR$/mdui/mdui.iml" />
+      <module fileurl="file://E:\LHT\githubspace\selframework\mdui\mdui.iml" filepath="E:\LHT\githubspace\selframework\mdui\mdui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/selframework.iml" filepath="$PROJECT_DIR$/selframework.iml" />
     </modules>
   </component>
 </project>
