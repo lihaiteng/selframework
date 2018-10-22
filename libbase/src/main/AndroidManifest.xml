@@ -32,6 +32,7 @@
 
         <activity android:name="com.lht.animator.base.keyFrameActivity"></activity>
 
+        <activity android:name="com.lht.animator.point.RotationCardActivity"></activity>
     </application>
 
 </manifest>

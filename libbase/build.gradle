@@ -46,5 +46,7 @@ dependencies {
 //    //---模块化
 
     androidTestCompile 'com.android.support:support-annotations:27.1.1'
+
+    implementation 'com.android.support:cardview-v7:27.1.1'
 }
 

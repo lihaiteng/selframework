@@ -29,6 +29,9 @@ public class ObjectAnimatorActivity extends BaseActivity {
     }
 
     public void clickA(View v){
+
+        textShow.setPivotX(10);
+
         ObjectAnimator objectAnimator = ObjectAnimator
 //                .ofFloat(textShow, "X", 0, 100)
 //                .ofFloat(textShow, "X", 0, 100,50,150,100,200)
@@ -36,8 +39,8 @@ public class ObjectAnimatorActivity extends BaseActivity {
 //                .ofFloat(textShow, "scaleX", 1, 2)
 //                .ofFloat(textShow, "scaleY", 1, 2)
 //                .ofFloat(textShow, "rotationX", 0.0F, 90.0F)
-//                .ofFloat(textShow, "rotationY", 0.0F, 90.0F)
-                  .ofFloat(textShow, "rotation", 0.0F, 90.0F)
+                .ofFloat(textShow, "rotationY", 0.0F, 90.0F)
+//                  .ofFloat(textShow, "rotation", 0.0F, 90.0F)
 //                .ofFloat(textShow, "translationX", 0.0f, 350.0f)
 //                .ofFloat(textShow, "translationY", 0.0f, 350.0f)
 //                .ofFloat(textShow, "alpha", 1, 0.2f,0.5f)
@@ -83,9 +86,6 @@ public class ObjectAnimatorActivity extends BaseActivity {
 //        objectAnimator.setTarget();//设置动画的对象
 //        objectAnimator.setEvaluator();//设置动画过度的评估者
 //        objectAnimator.getInterpolator();//设置动画插值
-
-          textShow.setPivotX(-10);
-          textShow.setPivotY(-10);
 
         objectAnimator.start();
     }
