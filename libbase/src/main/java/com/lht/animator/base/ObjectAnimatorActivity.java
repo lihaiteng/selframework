@@ -1,13 +1,11 @@
-package com.lht.demo;
+package com.lht.animator.base;
 
 import android.animation.Animator;
-import android.animation.AnimatorInflater;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.animation.PropertyValuesHolder;
 import android.animation.ValueAnimator;
-import android.annotation.SuppressLint;
 import android.view.View;
 import android.widget.TextView;
 
@@ -39,17 +37,19 @@ public class ObjectAnimatorActivity extends BaseActivity {
 //                .ofFloat(textShow, "scaleY", 1, 2)
 //                .ofFloat(textShow, "rotationX", 0.0F, 90.0F)
 //                .ofFloat(textShow, "rotationY", 0.0F, 90.0F)
+                  .ofFloat(textShow, "rotation", 0.0F, 90.0F)
 //                .ofFloat(textShow, "translationX", 0.0f, 350.0f)
 //                .ofFloat(textShow, "translationY", 0.0f, 350.0f)
-                .ofFloat(textShow, "alpha", 1, 0.2f,0.5f);
+//                .ofFloat(textShow, "alpha", 1, 0.2f,0.5f)
+                ;
 
         //动画绘制过程的监听
         objectAnimator.addUpdateListener(new ObjectAnimator.AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(ValueAnimator animation) {
-                Float cVal = (Float) animation.getAnimatedValue();//监听动画过程，获取过程中的属性值
-                textShow.setScaleX(cVal);//根据这个值，改变其它属性
-                textShow.setScaleY(cVal);
+//                Float cVal = (Float) animation.getAnimatedValue();//监听动画过程，获取过程中的属性值
+//                textShow.setScaleX(cVal);//根据这个值，改变其它属性
+//                textShow.setScaleY(cVal);
             }
         });
 
@@ -77,12 +77,16 @@ public class ObjectAnimatorActivity extends BaseActivity {
         });
 
         objectAnimator.setDuration(3000);//设置动画执行时间
-        objectAnimator.setRepeatCount(2);//设置动画重复次数
+//        objectAnimator.setRepeatCount(2);//设置动画重复次数
 //        objectAnimator.setRepeatMode()//设置动画重复模式
-        objectAnimator.setStartDelay(1000);//设置动画延时操作
+//        objectAnimator.setStartDelay(1000);//设置动画延时操作
 //        objectAnimator.setTarget();//设置动画的对象
 //        objectAnimator.setEvaluator();//设置动画过度的评估者
-        objectAnimator.getInterpolator();//设置动画插值
+//        objectAnimator.getInterpolator();//设置动画插值
+
+          textShow.setPivotX(-10);
+          textShow.setPivotY(-10);
+
         objectAnimator.start();
     }
 

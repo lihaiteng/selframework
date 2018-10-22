@@ -1,8 +1,7 @@
-package com.lht.demo;
+package com.lht.animator.base;
 
 import android.animation.LayoutTransition;
 import android.animation.ObjectAnimator;
-import android.text.Layout;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -29,8 +28,12 @@ public class LayoutTransitionActivity extends BaseActivity {
         layoutTransition = new LayoutTransition();
         linearLayout.setLayoutTransition(layoutTransition);
 
-        ObjectAnimator animator1 = ObjectAnimator.ofFloat(null, "rotationY", 0F, 90F, 0F);
+        ObjectAnimator animator1 = ObjectAnimator.ofFloat(null, "x", -1000F, 0F);
+        animator1.setDuration(2000);
+        ObjectAnimator animator2 = ObjectAnimator.ofFloat(null, "x", 0F, 2000F);
+        animator2.setDuration(2000);
         layoutTransition.setAnimator(LayoutTransition.APPEARING, animator1);
+        layoutTransition.setAnimator(LayoutTransition.DISAPPEARING,animator2);
     }
 
 

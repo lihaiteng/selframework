@@ -1,8 +1,7 @@
-package com.lht.demo;
+package com.lht.animator.base;
 
 import android.animation.Animator;
 import android.animation.AnimatorInflater;
-import android.animation.ValueAnimator;
 import android.annotation.SuppressLint;
 import android.view.View;
 import android.widget.TextView;

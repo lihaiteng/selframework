@@ -18,14 +18,19 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.lht.demo.ObjectAnimatorActivity"></activity>
+        <activity android:name="com.lht.animator.base.ObjectAnimatorActivity"></activity>
 
-        <activity android:name="com.lht.demo.ViewAnimatorActivity"></activity>
+        <activity android:name="com.lht.animator.base.ViewAnimatorActivity"></activity>
 
-        <activity android:name="com.lht.demo.XmlAnimatorActivity"></activity>
+        <activity android:name="com.lht.animator.base.XmlAnimatorActivity"></activity>
 
-        <activity android:name="com.lht.demo.LayoutTransitionActivity"></activity>
+        <activity android:name="com.lht.animator.base.LayoutTransitionActivity"></activity>
 
+        <activity android:name="com.lht.animator.base.LayoutAnimationActivity"></activity>
+
+        <activity android:name="com.lht.animator.base.ViewAnimateActivity"></activity>
+
+        <activity android:name="com.lht.animator.base.keyFrameActivity"></activity>
 
     </application>
 
