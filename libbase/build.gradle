@@ -38,15 +38,13 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-
-//    //模块化---
-//    //arouter
-//    compile 'com.alibaba:arouter-api:1.2.2'
-//    annotationProcessor 'com.alibaba:arouter-compiler:1.1.3'
-//    //---模块化
-
+    //    //模块化---
+    //    //arouter
+    //    compile 'com.alibaba:arouter-api:1.2.2'
+    //    annotationProcessor 'com.alibaba:arouter-compiler:1.1.3'
+    //    //---模块化
     androidTestCompile 'com.android.support:support-annotations:27.1.1'
-
     implementation 'com.android.support:cardview-v7:27.1.1'
+    implementation files('libs/android-viewbadger.jar')
 }
 

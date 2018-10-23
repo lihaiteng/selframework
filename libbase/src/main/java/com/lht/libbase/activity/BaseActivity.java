@@ -19,12 +19,22 @@ public class BaseActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         initView();
+        initSpecil();
+        control();
     }
     protected void initView() {
         context = this;
         activity = this;
         activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         activityHelper = new ActivityHelper(this);
+    }
+
+    //特殊部分的初始化
+    protected void initSpecil(){
+    }
+
+    protected void control() {
+
     }
 
     //设置返回键的类型  : 双击退出，单击finish，webview回退

@@ -5,9 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
-import com.lht.animator.base.ObjectAnimatorActivity;
-import com.lht.animator.base.ViewAnimatorActivity;
-import com.lht.animator.point.RotationCardActivity;
+import com.lht.andview.viewpager.ViewPagerAcitivty;
 
 /**
  * @date 2018/10/20 0020
@@ -17,6 +15,6 @@ public class StartActivity extends Activity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        startActivity(new Intent(this, RotationCardActivity.class));
+        startActivity(new Intent(this, ViewPagerAcitivty.class));
     }
 }
