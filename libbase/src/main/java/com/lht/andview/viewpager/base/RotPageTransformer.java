@@ -1,4 +1,4 @@
-package com.lht.andview.viewpager;
+package com.lht.andview.viewpager.base;
 
 import android.support.v4.view.ViewPager;
 import android.view.View;
@@ -16,7 +16,7 @@ public class RotPageTransformer implements ViewPager.PageTransformer {
     public void transformPage(View view, float position)
     {
 
-        LogUtil.d("TAG", view + " , " + position + "");
+//        LogUtil.d("TAG", view + " , " + position + "");
 
         if (position < -1)
         { // [-Infinity,-1)

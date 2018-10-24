@@ -6,6 +6,7 @@ import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
+import android.widget.Toast;
 
 public class BaseActivity extends AppCompatActivity {
 
@@ -23,7 +24,7 @@ public class BaseActivity extends AppCompatActivity {
         control();
     }
     protected void initView() {
-        context = this;
+        context = getApplicationContext();
         activity = this;
         activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         activityHelper = new ActivityHelper(this);
@@ -58,5 +59,9 @@ public class BaseActivity extends AppCompatActivity {
 
     public interface BackListener{
         void doBack();
+    }
+
+    protected void toast(String msg){
+        Toast.makeText(context,msg,Toast.LENGTH_SHORT).show();
     }
 }

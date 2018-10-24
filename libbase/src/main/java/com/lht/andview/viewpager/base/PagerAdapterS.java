@@ -1,4 +1,4 @@
-package com.lht.andview.viewpager;
+package com.lht.andview.viewpager.base;
 
 import android.support.annotation.NonNull;
 import android.support.v4.view.PagerAdapter;

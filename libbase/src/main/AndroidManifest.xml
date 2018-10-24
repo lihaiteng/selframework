@@ -34,9 +34,11 @@
 
         <activity android:name="com.lht.animator.point.RotationCardActivity"></activity>
 
-        <activity android:name="com.lht.libbasetest.activity.TestFragmentMainActivity"></activity>
+        <activity android:name="com.lht.libbasetest.activity.TestMainActivity"></activity>
 
-        <activity android:name="com.lht.andview.viewpager.ViewPagerAcitivty"/>
+        <activity android:name="com.lht.andview.viewpager.base.ViewPagerAcitivty"/>
+
+        <activity android:name="com.lht.libbasetest.activity.TestFragmentActivity"/>
     </application>
 
 </manifest>
