@@ -39,22 +39,40 @@ public class TestFragmentActivity extends BaseFragmentActivity {
         if(fnow != fa){
             showFragment(fa);
             hideFragment(fnow);
+            fnow = fa;
         }
     }
 
     public void b(View view) {
-        hideFragment(fa);
-        if(fb.isAdded())
-            showFragment(fb);
-        else
-            addFragment(fb);
+        if(fnow != fb){
+            hideFragment(fnow);
+            fnow = fb;
+            if(fb.isAdded())
+                showFragment(fb);
+            else
+                addFragment(fb);
+        }
     }
 
     public void c(View view) {
-        replaceFragment(fc);
+        if(fnow != fc){
+            hideFragment(fnow);
+            fnow = fc;
+            if(fc.isAdded())
+                showFragment(fc);
+            else
+                addFragment(fc);
+        }
     }
 
     public void d(View view) {
-        replaceFragment(fd);
+        if(fnow != fd){
+            hideFragment(fnow);
+            fnow = fd;
+            if(fd.isAdded())
+                showFragment(fd);
+            else
+                addFragment(fd);
+        }
     }
 }

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 获得焦点并且可用时的图片,是且的关系 -->
+    <item android:drawable="@color/green" android:state_focused="true" android:state_enabled="true"/>
+    <item android:drawable="@color/blue"/>
+</selector>

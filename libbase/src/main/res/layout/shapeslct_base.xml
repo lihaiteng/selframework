@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/shape"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:background="@drawable/shapeslct_shape_a"
+                android:text="ShapeTest"
+                android:gravity="center"
+                android:onClick="shapea"/>
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:background="@drawable/shapeslct_selector_a"
+                android:text="ShapeTest1"
+                android:gravity="center"/>
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:background="@drawable/shapeslct_selector_a"
+                android:text="ShapeTest2"
+                android:gravity="center"/>
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/shapeslct_selector_b"
+                android:clickable="true"/>
+
+            <Button
+                android:id="@+id/both"
+                android:layout_marginTop="5dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:text="both"
+                android:background="@drawable/shapeslct_both"/>
+            <Button
+                android:id="@+id/clickforoth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="clickforoth"
+                android:onClick="clickforoth"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

@@ -18,11 +18,16 @@ public class BaseActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        beforeCreate();
         super.onCreate(savedInstanceState);
         initView();
         initSpecil();
         control();
     }
+
+    protected void beforeCreate() {
+    }
+
     protected void initView() {
         context = getApplicationContext();
         activity = this;
