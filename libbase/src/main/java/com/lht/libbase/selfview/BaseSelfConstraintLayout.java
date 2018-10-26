@@ -28,8 +28,10 @@ public class BaseSelfConstraintLayout extends ConstraintLayout{
 
     public BaseSelfConstraintLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
-
         init(context,attrs);
+        initAttrs();
+        if(typedArray!=null)
+            typedArray.recycle();
     }
 
     protected void init(Context context, AttributeSet attrs) {
@@ -40,6 +42,9 @@ public class BaseSelfConstraintLayout extends ConstraintLayout{
 
         inflater = LayoutInflater.from(context);
 
+    }
+
+    protected void initAttrs() {
     }
 
     public void setTypeArray(int[] styleAttr){

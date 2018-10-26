@@ -50,6 +50,14 @@ public class LogUtil {
         Log.d(className, createLog(String.valueOf(message),""));
     }
 
+    public static void d(float message){
+        if (!BuildConfig.DEBUG)
+            return;
+        getMethodNames(new Throwable().getStackTrace());
+
+        Log.d(className, createLog(String.valueOf(message),""));
+    }
+
     public static void d(String msg1,int msg2){
         if (!BuildConfig.DEBUG)
             return;

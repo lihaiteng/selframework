@@ -1,13 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.lht.libbasetest.selfview.TestShowTextView
+    <com.lht.libbase.selfview.ShowTextView
         android:id="@+id/showtext"
         android:layout_width="100dp"
-        android:layout_height="60dp">
+        android:layout_height="50dp"
+        app:showtext_bgcolor="@color/blue"
+        app:showtext_text="美食节"
+        app:showtext_textcolor="#fff"
+        app:showtext_textsize="14sp">
 
-    </com.lht.libbasetest.selfview.TestShowTextView>
+    </com.lht.libbase.selfview.ShowTextView>
+
+    <View
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:background="@color/blue"/>
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="btn"
+        android:text="美食节"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn">
+
+        <com.lht.libbasetest.selfview.TestSelfCircleVIew
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear2"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linear">
+
+        <com.lht.libbase.selfview.SelfTextVIew
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            app:selftext_bgcolor="@color/blue"
+            app:selftext_text="美食节"
+            app:selftext_textcolor="#fff"
+            app:selftext_textsize="14sp"
+            app:selftext_vprecent="0.45"
+            app:selftext_hprecent="0.65"
+            app:selftext_wdprecent="0.7"
+            app:selftext_hgprecent="0.65"/>
+
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

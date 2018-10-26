@@ -26,10 +26,21 @@
         <!--<attr name="title1_right3_img" format="reference"></attr>&lt;!&ndash; 右3图片src &ndash;&gt;-->
     <!--</declare-styleable>-->
 
-    <declare-styleable name="testshowtext">
+    <declare-styleable name="ShowText">
         <attr name="showtext_text" format="string"></attr>
-        <attr name="showtext_textsize" format="integer"></attr>
+        <attr name="showtext_textsize" format="dimension"></attr>
         <attr name="showtext_textcolor" format="color"></attr>
-        <attr name="showtext_color" format="color"></attr>
+        <attr name="showtext_bgcolor" format="color"></attr>
+    </declare-styleable>
+
+    <declare-styleable name="SelfText">
+        <attr name="selftext_text" format="string"></attr>
+        <attr name="selftext_textsize" format="dimension"></attr>
+        <attr name="selftext_textcolor" format="color"></attr>
+        <attr name="selftext_bgcolor" format="color"></attr>
+        <attr name="selftext_vprecent" format="float"></attr>
+        <attr name="selftext_hprecent" format="float"></attr>
+        <attr name="selftext_wdprecent" format="float"></attr>
+        <attr name="selftext_hgprecent" format="float"></attr>
     </declare-styleable>
 </resources>
