@@ -2,11 +2,14 @@ package com.lht.libbase.activity;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.widget.Toast;
+
+import com.lht.libbase.utils.LogUtil;
 
 public class BaseActivity extends AppCompatActivity {
 
@@ -18,6 +21,8 @@ public class BaseActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+//        if(savedInstanceState!=null)
+//            LogUtil.d("onCreate==>",savedInstanceState.getInt("i"));
         beforeCreate();
         super.onCreate(savedInstanceState);
         initView();
@@ -41,6 +46,19 @@ public class BaseActivity extends AppCompatActivity {
 
     protected void control() {
 
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+//        outState.putInt("i",7);
+        super.onSaveInstanceState(outState);
+//        LogUtil.d("onSaveInstanceState");
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+//        LogUtil.d("onRestoreInstanceState",savedInstanceState.getInt("i"));
     }
 
     //设置返回键的类型  : 双击退出，单击finish，webview回退

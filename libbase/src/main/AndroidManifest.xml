@@ -43,6 +43,8 @@
         <activity android:name="com.lht.shapeselector.ShapeSelectorActivity"/>
 
         <activity android:name="com.lht.libbasetest.selfview.TestSelfViewActivity"/>
+
+        <activity android:name="com.lht.libbasetest.utils.UtilsActivity"/>
     </application>
 
 </manifest>

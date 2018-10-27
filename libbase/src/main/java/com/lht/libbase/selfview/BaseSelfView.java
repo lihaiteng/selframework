@@ -63,5 +63,8 @@ public class BaseSelfView extends View {
         super.onDraw(canvas);
     }
 
-
+    @Override
+    protected void dispatchDraw(Canvas canvas) {
+        super.dispatchDraw(canvas);
+    }
 }
